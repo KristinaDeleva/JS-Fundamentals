@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <div id='test'></div>
+</head>
+<body>
+<script>
+    function draw(n) {
+        let result = '<div class="\chessboard\">\n';
+        for (let row = 0; row < n; row++) {
+            result += '  <div>\n';
+            for (let col = 0; col < n; col++) {
+                let color = (row + col) % 2 === 0 ? 'black' : 'white'
+                result += `    <span class="${color}"></span>\n`;
+            }
+            result += '  </div>\n';
+        }
+        result += '  </div>\n'
+        return result
+    }
+
+    let css = document.createElement("style");
+    css.innerHTML = `
+  body { background: #CCC; }
+  .chessboard { display: inline-block; }
+  .black, .white {
+     width:50px; height:50px;
+     display: inline-block; }
+  .black { background: black; }
+  .white { background: white; }
+`;
+    document.getElementsByTagName("head")[0].appendChild(css);
+    document.getElementById('test').innerHTML = draw(10);
+</script>
+</body>
+</html>
