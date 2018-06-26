@@ -1,1 +1,3 @@
-# JS-Fundamentals
+[![logo](http://innovationstarterbox.bg/wp-content/uploads/2016/05/Softuni_logo_trasparent.png)](http://softuni.org)
+# JS Fundamentals
+Coursework for SoftUni JS Fundamentals course from the JS Core module.
